@@ -26,7 +26,7 @@ function ready(){
     for (var i = 0; i < removeCartButtons.length; i++){ 
         var button = removeCartButtons[i]
         button.addEventListener("click", removeCartItem) 
-    }
+     }
     //Cambios en las cantidades
     var quantityInputs = document.getElementsByClassName("cart-quantity");
     for (var i = 0; i < quantityInputs.length; i++){
@@ -43,14 +43,14 @@ function ready(){
 
 //removiendo items del carrito
 function removeCartItem(event){
-    var buttonClicked = event.target
+    var buttonClicked = event.target;
     buttonClicked.parentElement.remove()
     updatetotal();
 }
 // Cambios en la cantidad
 function quantityChanged(event){
     var input = event.target;
-    if (isNaN(input.value) || input.value <= 0){
+    if (isNaN(input.value) || input.value <= 0) {
         input.value = 1; 
     }
     updatetotal();
@@ -69,22 +69,23 @@ function addProductToCart(title, price, productImg){
     var cartShopBox = document.createElement("div");
     cartShopBox.classList.add("cart-box");
     var cartItems = document.getElementsByClassName("cart-content")[0];
-    var cartItemsNames = cartItems.getElementsByClassName("product-title");
+    var cartItemsNames = cartItems.getElementsByClassName("cart-product-title");
     for (var i = 0; i < cartItemsNames.length; i++){
         alert ("¿Querés agregar este Item al carrito?");
         return; 
     }
     
 }
-var cartBoxContent = `
-                        <img src="../multimedia/shop/shop1.webp" class="product-img" alt="">
-                        <div class="des">
-                            <span>Vida Diaria</span>
-                            <h5 class="product-title">Cocina Completa</h5>
-                            <h4 class="price">$14000</h4>
-                        </div>
-                        <a href="#"><i id="cart" class="fa-solid fa-cart-shopping add-cart" ></i></a>
-                        </div>`;
+var cartBoxContent = `   
+                            <img src="${productImg}"  alt="" class="cart-img">
+                            <div class="detail-box">
+                                <div class="cart-product-title">${title}</div>
+                                <div class="cart-price">${price}</div>
+                                <input type="number" value="1" class="cart-quantity">
+                            </div>
+                            <!--  Remove Cart -->
+                            <i class="fa-solid fa-trash cart-remove"></i>
+                                                `;
 cartShopBox.innerHTML = cartBoxContent;
 cartItems.append(cartShopBox)
 cartShopBox
