@@ -354,7 +354,7 @@ footer .copyright {
 .cart{
     position: fixed;
     top: 0;
-    right: 0;
+    right: -100%;
     width: 360px;
     min-height: 100vh;
     background: #ccd4f8;
@@ -514,5 +514,27 @@ footer .copyright {
     }
     #feature .fe-box{
         margin: 15px 15px;
+    }
+}
+@media (max-width: 1080px){
+    .container {
+        margin: 0 auto;
+        width: 90%;
+    }
+    .shop {
+        margin-top: 2rem !important;
+    }
+}
+@media (max-width: 400px){
+    .cart {
+        width: 320px;
+    }
+}
+@media (max-width: 360px){
+    .shop {
+        margin-top: 1rem !important;
+    }
+    .cart {
+        width: 280px;
     }
 }
