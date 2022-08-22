@@ -84,7 +84,7 @@ function addProductToCart(title, price, productImg){
     cartShopBox.classList.add("cart-box");
     let cartItems = document.getElementsByClassName("cart-content")[0];
     let cartItemsNames = cartItems.getElementsByClassName("cart-product-title");
-    for (let i = 0; i < cartItemsNames.length; i++){
+   for (let i = 0; i < cartItemsNames.length; i++){
         alert ("¿Querés agregar este Item al carrito?");
         return; 
     }
