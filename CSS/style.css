@@ -246,6 +246,21 @@ body{
     bottom: 20px;
     right: 10px;
 }
+/*boton del index*/
+.btn {
+    display: flex;
+    margin: 1.5rem auto 1.5rem auto;
+    padding: 12px 20px;
+    border: none;
+    background-color: #088178;
+    color: #e3e6f3;
+    font-size: 1rem;
+    font-weight: 500; 
+    cursor: pointer;
+}
+.btn:hover {
+    background: #044743;
+}
 /* footer */
 footer {
     display: flex;
