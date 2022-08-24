@@ -1,0 +1,26 @@
+[
+    {
+        "id":1,
+        "nombre": "Samantha",
+        "email": "samanta_britez@hotmail.com",
+        "estado":true
+    },
+    {
+        "id":2,
+        "nombre": "Sebastian",
+        "email": "seba_soria@gmail.com",
+        "estado":true
+    },
+    {
+        "id":3,
+        "nombre": "Debora",
+        "email": "debo_caramayo@hotmail.com",
+        "estado":false
+    },
+    {
+        "id":4,
+        "nombre": "Santiago",
+        "email": "santiago.belmont@hotmail.com",
+        "estado":true
+    }
+]
